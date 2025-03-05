@@ -3,46 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мой сайт</title>
+    <title>Жасулан Шакенов</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background-color: #333;
+        .dark-mode {
+            background-color: #1a202c;
             color: white;
-            padding: 20px;
-            font-size: 24px;
-        }
-        .container {
-            padding: 50px;
-        }
-        a {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #333;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-        a:hover {
-            background-color: #555;
         }
     </style>
 </head>
-<body>
-    <header>
+<body class="bg-gray-100 text-gray-900">
+    <header class="bg-gray-800 text-white p-6 text-center text-xl font-bold">
         Добро пожаловать на мой сайт!
     </header>
-    <div class="container">
-        <h1>Привет! Я Жасулан</h1>
-        <p>Это моя личная страничка, где я делюсь своими проектами и идеями.</p>
-<!--         <a href="#">Связаться со мной</a> -->
+    <div class="container mx-auto p-8 text-center">
+        <h1 class="text-3xl font-bold">Привет! Я Жасулан Шакенов</h1>
+        <p class="mt-4 text-lg">Senior Data Scientist в Magnum Cash&Carry</p>
+        <p class="mt-2">Data Science ментор в <a href="https://www.nfactorial.school" class="text-blue-500 hover:underline">nFactorial School</a></p>
+        <p class="mt-2">Занимаюсь бегом, марафонец 42.2км 🏃‍♂️</p>
+        
+        <h2 class="mt-8 text-2xl font-semibold">Контакты</h2>
+        <p class="mt-2">
+            <a href="https://www.linkedin.com/in/shakenov" class="text-blue-500 hover:underline">LinkedIn</a> |
+            <a href="https://t.me/Zhasike" class="text-blue-500 hover:underline">Telegram</a>
+        </p>
+        
+        <button onclick="toggleDarkMode()" class="mt-6 px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-600">Переключить тему</button>
     </div>
+    
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
 </body>
 </html>
